@@ -5,6 +5,7 @@ import io.opentelemetry.api.trace.Span;
 import io.opentelemetry.api.trace.StatusCode;
 import io.opentelemetry.api.trace.Tracer;
 import io.opentelemetry.context.Scope;
+import io.opentelemetry.extension.annotations.WithSpan;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -12,9 +13,11 @@ public class UseLess5 {
 
     private final Tracer tracer = GlobalOpenTelemetry.getTracer("name");
 
+    @WithSpan
     public void soninho() {
 
         Span span = tracer.spanBuilder("SpanName").startSpan();
+
         try (Scope scope = span.makeCurrent()) {
            //Seu código
             // { }

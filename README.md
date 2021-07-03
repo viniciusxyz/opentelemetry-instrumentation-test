@@ -18,23 +18,23 @@ OTEL_RESOURCE_ATTRIBUTES=service.name=banking1
 Pode ser utilizado para adicionar novos spans na instrumentação automática 
 
 ```java
-    @WithSpan
-    public void soninho() {
-        try {
-            Thread.sleep(10);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+@WithSpan
+public void soninho() {
+    try {
+        Thread.sleep(10);
+    } catch (InterruptedException e) {
+        e.printStackTrace();
     }
+}
 ```
 
 - Depende de:
 
 ```xml
-		<dependency>
-			<groupId>io.opentelemetry</groupId>
-			<artifactId>opentelemetry-extension-annotations</artifactId>
-		</dependency>
+<dependency>
+    <groupId>io.opentelemetry</groupId>
+    <artifactId>opentelemetry-extension-annotations</artifactId>
+</dependency>
 ```
 
 
@@ -66,8 +66,8 @@ public class UseLess5 {
 - Depende de:
 
 ```xml
-		<dependency>
-			<groupId>io.opentelemetry</groupId>
-			<artifactId>opentelemetry-api</artifactId>
-		</dependency>
+<dependency>
+    <groupId>io.opentelemetry</groupId>
+    <artifactId>opentelemetry-api</artifactId>
+</dependency>
 ```
